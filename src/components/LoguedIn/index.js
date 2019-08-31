@@ -44,19 +44,6 @@ class LoguedIn extends Component {
 
         
     }); 
-
-    /*  fetch(aurl,options)
-      .then(function(response){ 
-        return response.json()
-          .then(function(data) {
-            var token = data;
-            localStorage.setItem('token',JSON.stringify(token));
-            console.log(token)    
-          })
-          .catch(function(error) {
-          console.log('Fetch Error:', error);
-        });
-    }); */
     
   }
 
