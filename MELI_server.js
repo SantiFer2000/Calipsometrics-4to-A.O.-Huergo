@@ -172,6 +172,12 @@ app.get('/BMap', function(req, res) {
     
 } )
 
+app.get('/sellMap', function(req, res) {
+    ubicacion.sellMap(req, res);
+    //console.log (this.valoraciones.seller_reputation.transactions.ratings)
+    
+} )
+
 // ===== END ROUTING =====
 
 // Levanto el server en express en el puerto 8081.
