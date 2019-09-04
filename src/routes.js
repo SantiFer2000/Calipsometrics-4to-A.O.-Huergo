@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 // Components
 import App from './components/App';
 import BMap from './components/BMap';
+import sellMap from './components/sellMap';
 //import CatTime from './components/CatTime';
 import LoguedIn from './components/LoguedIn';
 import Home from './components/Home';
@@ -17,6 +18,7 @@ const AppRoutes = () =>
             <Route exact path="/logued_in" component={LoguedIn} />
             <Route exact path="/" component={Home} />
             <Route exact path="/bmap" component={BMap} />
+            <Route exact path="/sellMap" component={sellMap} />
             <Route exact path="/valoraciones" component={valoraciones} />
             <Route component={Page404} />
         </Switch>

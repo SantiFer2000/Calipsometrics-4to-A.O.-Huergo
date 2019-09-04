@@ -8,8 +8,8 @@ var url = 'https://api.mercadolibre.com/oauth/token?';
 var options = {
    form: {
     "grant_type":"authorization_code",
-    "client_id": '4069477448135367',
-    "client_secret": 'eqaPB8Ot1neu4JVVGyqDu5tPorwvmlh2',
+    "client_id": '6722315906287226',
+    "client_secret": 'su5nxkJECtvTyYp5GGVlGcy8QicnzeAI',
     "redirect_uri": "http://localhost:3000/logued_in",
     "code": ""
    },
@@ -44,19 +44,6 @@ class LoguedIn extends Component {
 
         
     }); 
-
-    /*  fetch(aurl,options)
-      .then(function(response){ 
-        return response.json()
-          .then(function(data) {
-            var token = data;
-            localStorage.setItem('token',JSON.stringify(token));
-            console.log(token)    
-          })
-          .catch(function(error) {
-          console.log('Fetch Error:', error);
-        });
-    }); */
     
   }
 

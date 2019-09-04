@@ -7,6 +7,10 @@ export default [
         title: 'BMap',
         url: '/bmap'
     },
+    {
+        title: 'sellMap',
+        url: '/sellMap'
+    },
     /*{
         title: 'CatTime',
         url: '/cattime'

@@ -2,46 +2,14 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
-import { parse } from 'query-string';
 
 
 var complete_marker_list = {name: {}, lat: {}, long: {}};
 var marker_list = {name: {0:0},cant: {0:0}, lat: {0:0}, long: {0:0}};
-var url = 'https://api.mercadolibre.com/oauth/token?';
-var data;
-
-var options = {
-  form: {
-   "grant_type":"authorization_code",
-   "client_id": '6722315906287226',
-   "client_secret": 'su5nxkJECtvTyYp5GGVlGcy8QicnzeAI',
-   "redirect_uri": "http://localhost:3000/logued_in",
-   "code": ""
-  },
-  method: "POST", 
-  headers: {
-   'Content-Type': 'application/x-www-form-urlencoded',
-   'Accept': 'application/json' 
-  }
-};
 
 class BMap extends Component {
 
   componentWillMount(){
-
-    const URLSearchParams = window.URLSearchParams;
-
-    var burl = new URLSearchParams();
-
-    burl.append("grant_type","authorization_code")
-    burl.append("client_id", '6722315906287226')
-    burl.append("client_secret", 'su5nxkJECtvTyYp5GGVlGcy8QicnzeAI',)
-    burl.append("code",parse(this.props.location.search).code);
-    burl.append("redirect_uri",options.form.redirect_uri)
-
-    var aurl = url + burl
-
-    console.log(aurl)
 
     fetch('http://localhost:8081/BMap')
         .then(function(datain) {
