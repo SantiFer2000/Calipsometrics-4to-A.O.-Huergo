@@ -66,7 +66,11 @@ import {Alert} from 'react-bootstrap';
 ######################################################################################
 */
 
-/*
+//https://github.com/shukerullah/react-geocode  <-- Se está utilizando esta página para ver cómo implementar Geocode
+
+// set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
+Geocode.setApiKey('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+
 Geocode.setLanguage('es');
 
 // Enable or disable logs. Its optional.
@@ -93,7 +97,7 @@ Geocode.fromAddress('Eiffel Tower').then(
     console.error(error);
   }
 );
-*/
+
 
 var complete_marker_list = {name: {}, lat: {}, long: {}};
 var marker_list = {name: {0:0},cant: {0:0}, lat: {0:0}, long: {0:0}};
