@@ -41,7 +41,6 @@ class LoguedIn extends Component {
     fetch("http://localhost:8081/logued_in?code="+parse(this.props.location.search).code)
       .then(function(response){ 
         console.log('datos_enviados_al_server_para_que_pida_token_y_lo_guarde')
-
         
     }); 
     

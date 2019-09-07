@@ -30,11 +30,13 @@ componentWillMount(){
 
   fetch('http://localhost:8081/sellMap')
       .then(function(datain) {
-        return datain.json()
+        return datain.text()
       })
       .then(function(dats){
+        if (dats !== "No existe tal usuario."){
+
         console.log(dats)
-        var data = dats
+        var data = JSON.parse(dats)
         console.log(data)
         marker_list = {name: {0:0},cant: {0:0}, lat: {0:0}, long: {0:0}};
 
@@ -82,6 +84,11 @@ componentWillMount(){
         }
         console.log(marker_list)
         localStorage.setItem('markerList',JSON.stringify(marker_list));
+        }else{
+
+          
+
+        }
       })
 }
 
