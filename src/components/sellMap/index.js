@@ -1,6 +1,7 @@
 // Dependencies
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import Geocode from 'react-geocode';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import {Alert} from 'react-bootstrap';  
 
@@ -64,6 +65,36 @@ import {Alert} from 'react-bootstrap';
 #                                                                           19.08.02 #
 ######################################################################################
 */
+
+/*
+Geocode.setLanguage('es');
+
+// Enable or disable logs. Its optional.
+Geocode.enableDebug();
+
+// Get address from latidude & longitude.
+Geocode.fromLatLng('48.8583701', '2.2922926').then(
+  response => {
+    const address = response.results[0].formatted_address;
+    console.log(address);
+  },
+  error => {
+    console.error(error);
+  }
+);
+
+// Get latidude & longitude from address.
+Geocode.fromAddress('Eiffel Tower').then(
+  response => {
+    const { lat, lng } = response.results[0].geometry.location;
+    console.log(lat, lng);
+  },
+  error => {
+    console.error(error);
+  }
+);
+*/
+
 var complete_marker_list = {name: {}, lat: {}, long: {}};
 var marker_list = {name: {0:0},cant: {0:0}, lat: {0:0}, long: {0:0}};
 

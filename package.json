@@ -21,6 +21,7 @@
     "react-bootstrap": "^1.0.0-beta.11",
     "react-chartjs-2": "^2.7.6",
     "react-dom": "^16.8.6",
+    "react-geocode": "^0.1.2",
     "react-leaflet": "^2.3.0",
     "react-leaflet-markercluster": "^2.0.0-rc3",
     "react-router-dom": "^5.0.0",
