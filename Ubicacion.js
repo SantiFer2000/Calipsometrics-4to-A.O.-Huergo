@@ -95,18 +95,21 @@ function sellMap(reqDelSellMap, resDelSellMap){
 				resDelSellMap.send('No existe tal usuario.');
 				//return
 			} else {
-				losdatosdelusuario = resDelSellMap;
-				console.log('lo de arriba es el error');
-				console.log(losdatosdelusuario);
-				console.log('lo que está arriba son los datos del usuatio');
+				console.log('lo de abajo es el res')
+				console.log(res.seller.id)
+				fs.writeFile('res.txt', JSON.stringify(res), function (err) {
+					if (err) throw err;
+				 });
+				//console.log(losdatosdelusuario);
+				console.log('lo que está arriba son los datos del usuario');
 				meliObject.get('/orders/search', {
-					seller: token.seller_id,
-					status: 'paid'},
+					seller: res.seller.id,
+					status: 'paid'}, // puede que el paid no vaya
 					function (error, cosaenmedio, body) {
 						
 						console.log(cosaenmedio)
-					
-					res.send(JSON.stringify(cosaenmedio))
+						console.log(body)
+						resDelSellMap.send(JSON.stringify(cosaenmedio))
 				})
 			}
 		});
