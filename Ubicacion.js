@@ -1,6 +1,9 @@
 var meli = require('mercadolibre');
 var datos_acceso = require('./datos_acceso');
 
+//Implementar MongoDB
+//https://hackernoon.com/how-to-combine-a-nodejs-back-end-with-a-reactjs-front-end-app-ea9b24715032
+
 //VALORACIONES DEL VENDEDOR
 
 var fs = require ('fs')
